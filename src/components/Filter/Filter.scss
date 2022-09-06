@@ -1,0 +1,144 @@
+.filter {
+    margin-top: 60px;
+    &__search {
+        margin: 0 auto;
+        display: flex;
+        width: 800px;
+        justify-content: space-between;
+        align-items: center;
+        &-text {
+            display: flex;
+            align-items: center;
+            &-title {
+                margin-right: 20px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            &-input {
+                background: #FFFFFF;
+                box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+                border: none;
+                    width: 108px;
+                padding: 6px 36px 6px 36px;
+                &::placeholder {
+                    font-family: 'Merienda';
+                    font-size: 12px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+        &-countries {
+            display: flex;
+            align-items: center;
+            &-title {
+                margin-right: 35px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;  
+            }
+            &-btn {
+                font-family: 'Merienda';
+                margin-right: 5px;
+                width: 75px;
+                height: 30px;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 17px;
+                background: #FFFFFF;
+                box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+                border-radius: 4px 0px 0px 4px;
+                border: none;
+                cursor: pointer;
+            }
+            // &-Kenya {
+            //     font-family: 'Merienda';
+            //     margin-right: 5px;
+            //     width: 75px;
+            //     height: 30px;
+            //     font-weight: 400;
+            //     font-size: 12px;
+            //     line-height: 17px;
+            //     background: #FFFFFF;
+            //     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+            //     border-radius: 0px;
+            //     border: none;
+            //     cursor: pointer;
+            // }
+            // &-Columbia {
+            //     font-family: 'Merienda';
+            //     width: 75px;
+            //     height: 30px;
+            //     font-weight: 400;
+            //     font-size: 12px;
+            //     line-height: 17px;
+            //     background: #FFFFFF;
+            //     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+            //     border-radius: 0px 4px 4px 0px;
+            //     border: none;
+            //     cursor: pointer;
+            // }
+        }
+    }
+
+    &__wrapper {
+        margin: 60px auto 0px auto;
+        width: 800px;
+        display: flex;
+        row-gap: 60px;
+        column-gap: 70px;
+        flex-wrap: wrap;
+        &-card {
+            width: 180px;
+            height: 220px;
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+            background: #FFFFFF;
+            border-radius: 8px;
+            padding: 30px 18px 22px 20px;
+            &-title {
+                margin-top: 14px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+            }
+            &-subtitle {
+                margin-top: 14px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: right;
+            }
+            &-price {
+                margin-top: 14px;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: right;
+            }
+        }
+    }
+}
+
+.imgg {
+   text-align: center;
+}
+
+.activeButton {
+    font-family: 'Merienda';
+    margin-right: 5px;
+    width: 75px;
+    height: 30px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 4px 0px 0px 4px;
+    border: none;
+    cursor: pointer;
+    background: #000;
+    color: #FFFFFF;
+}

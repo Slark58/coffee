@@ -1,0 +1,26 @@
+.Card__wrapper {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 70px;  
+    &-item {
+        margin-top: 40px;
+        text-align: center;
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.65);
+        width: 210px;
+        height: 220px;
+        border-radius: 8px;
+        &:nth-child(3) {
+            padding-top: 44px;
+            height: 195px;
+        }
+        &-text {
+            margin-top: 10px;
+        }
+        &-salary {
+            text-align: right;
+            margin-top: 10px;
+        }
+    }
+}

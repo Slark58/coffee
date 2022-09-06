@@ -1,0 +1,25 @@
+.about {
+    min-height: 480px;
+    padding-top: 80px;
+    &__title {
+        margin: 0 auto;
+        width: 110px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 35px;
+        color: #000000;
+    }
+    &__info {
+        width: 675px;
+        margin: 40px auto 0 auto;
+        text-align: center;
+
+        &-second {
+            margin-top: 40px;
+        }
+    }
+}
+
+.Black {
+    background-color: #000000;
+}

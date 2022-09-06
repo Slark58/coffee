@@ -1,0 +1,12 @@
+.Ourcoffee {
+    height: 260px;
+    background-image: url('../../Img/BG_2.jpg');
+    &__title {
+        padding-top: 130px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 58px;
+        color: #FFFFFF;
+    }
+}
