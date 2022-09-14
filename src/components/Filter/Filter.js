@@ -22,35 +22,6 @@ class Filter extends Component{
         }
 
         
-        
-        
-
-        handleClick = (e) => {
-
-            
-            
-            if(e.target.className === 'activeButton') {
-                e.target.className = 'filter__search-countries-btn';
-                console.log('remove')
-            } else {
-                e.target.className = 'activeButton';
-                console.log('add class')
-            }
-
-                
-          };
-
-
-        onReset = ({name, title, price}) => {
-            const foo = document.querySelectorAll("filter__search-countries-btn ");
-
-            
-
-            foo.forEach(button => {
-                button.classList.remove('activeButton')
-
-            })
-        }
 
 
         render() {
@@ -66,6 +37,7 @@ class Filter extends Component{
             const buttons = buttonsData.map(({name}) => {
                 const active = filter === name;
                 const clazz = active ? 'activeButton' : '';
+
                 return (
                     <button onClick={() => onFilterSelect(name)} className={`filter__search-countries-btn ${clazz}`}>{name}</button>
                 )
@@ -92,13 +64,11 @@ class Filter extends Component{
                         <div onClick={this.onStyle} className="filter__search-countries">
                             <div className="filter__search-countries-title">Filter</div>
                             {buttons}
-                            <buttons onClick={() => onFilterSelect('')} className={`filter__search-countries-btn reset`}>reset</buttons>
-                            {/* <button onClick={this.handleClick} className={"filter__search-countries-btn Brazil"}>Brazil</button>
-                            <button onClick={this.handleClick} className={"filter__search-countries-btn Columbia"}>Columbia</button>
-                            <button onClick={this.handleClick} className={"filter__search-countries-btn Kenya"}>Kenya</button> */}
+                            <button onClick={() => onFilterSelect('')} className={`filter__search-countries-btn reset`}>reset</button>
                         </div>
                     </div>
-    
+                            
+                    
     
                     <div className="filter__wrapper">
                         {elements}
