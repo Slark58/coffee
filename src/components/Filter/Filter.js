@@ -1,31 +1,28 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Cards from './Cards/Cards';
 import './Filter.scss'
 
 
-class Filter extends Component{
-        constructor(props) {
-            super(props);
-            this.state = {
-                term: '',
-                active: false   
-            }
-        }
+const Filter = (props) => {
+
+
+        const [term, setTerm] = useState('');
+        const [active, setActive] = useState(false);
 
         
 
-        onMitting = (e) => {
+        const onMitting = (e) => {
             const term = e.target.value;
-            this.setState({term})
-            this.props.onUpdateSearch(term)
-            // console.log(this.state.term)
+            setTerm(term)
+            console.log('render term')
+            props.onUpdateSearch(term)
         }
 
         
 
 
-        render() {
-            const {data, filter, onFilterSelect} = this.props;
+        
+            const {data, filter, onFilterSelect} = props;
 
             const buttonsData = [
                 {name: 'Brazil' },
@@ -59,9 +56,9 @@ class Filter extends Component{
                     <div className="filter__search">
                         <div className="filter__search-text">
                             <div className="filter__search-text-title">Lookiing for</div>
-                            <input value={this.state.term} onChange={this.onMitting} className="filter__search-text-input" placeholder='start typing here...'></input>
+                            <input value={term} onChange={onMitting} className="filter__search-text-input" placeholder='start typing here...'></input>
                         </div>
-                        <div onClick={this.onStyle} className="filter__search-countries">
+                        <div  className="filter__search-countries">
                             <div className="filter__search-countries-title">Filter</div>
                             {buttons}
                             <button onClick={() => onFilterSelect('')} className={`filter__search-countries-btn reset`}>reset</button>
@@ -78,6 +75,6 @@ class Filter extends Component{
                 
             );
         }
-}
+
 
 export default Filter;

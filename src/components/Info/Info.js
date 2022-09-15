@@ -6,7 +6,10 @@ import woman from '../../Img/woman__2.png';
 import './Info.scss';
 
 class Info extends Component {
+
     render() {
+    console.log('render info')
+
         return (
             <section className='info'>
                 <div className="info__wrapper">

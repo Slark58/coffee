@@ -17,8 +17,8 @@ const Links = ({data, onUpdateSearch, filter, onFilterSelect}) => {
     return (
         <Fragment> 
         <nav className="nav indent">
-            <Link to="/" className="nav__link WhiteText"><img src={coffee2} alt="coffee"/>Coffee house</Link>
             <ul className="nav__list">
+            <Link to="/" className="nav__link WhiteText"><img src={coffee2} alt="coffee"/>Coffee house</Link>
                 <li className="nav__lists"><Link className="nav__link WhiteText" to="/ourcoffee">Our coffee</Link></li>
                 <li className="nav__lists"><Link className="nav__link WhiteText" to="/foryourpleasure">For your pleasure</Link></li>
             </ul>
