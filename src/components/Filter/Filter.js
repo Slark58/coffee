@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import Cards from './Cards/Cards';
 import './Filter.scss'
 
@@ -9,16 +9,20 @@ const Filter = (props) => {
         const [term, setTerm] = useState('');
         const [active, setActive] = useState(false);
 
+
+        
         
 
         const onMitting = (e) => {
-            const term = e.target.value;
-            setTerm(term)
-            console.log('render term')
+            setTerm(e.target.value)
             props.onUpdateSearch(term)
         }
 
+
         
+        
+
+     
 
 
         
@@ -42,12 +46,14 @@ const Filter = (props) => {
 
             
 
-            const elements = data.map(item => {
-                const {name, title, price} = item
-                return (
-                    <Cards name={name} title={title} price={price}/>
-                )
-            })
+            const elements = useMemo(() => {
+                    return data.map(item => {
+                        const {name, title, price} = item
+                        return (
+                            <Cards name={name} title={title} price={price}/>
+                    )
+                })
+            }, [term, filter])
 
             console.log('render')
 
